@@ -6,11 +6,26 @@
     <link rel="stylesheet" href="./dist/output.css">
     <title>Website project template</title>
 </head>
+<script>
+    const loadComponents = (id, url) =>  {
+        fetch(url)
+        .then((response) => response.text())
+        .then((html) => {
+            document.getElementById(id).innerHTML = html;
+        });
+    }
 
+    window.onload = () => {
+        loadComponents('header', 'src/sections/header.html');
+        loadComponents('hero', 'src/sections/hero.html');
+        loadComponents('contact', 'src/sections/contact.html');
+        loadComponents('footer', 'src/sections/footer.html');
+    }
+</script>
 <body>
-    <div class="bg-blue-900" id="header"></div>
+    <div class="bg-blue-500 " id="header"></div>
     <div id="hero"></div>
     <div id="contact"></div>
-    <div id="footer"> My Footer Project</div>
+    <div id="footer"></div>
 </body>
 </html>
