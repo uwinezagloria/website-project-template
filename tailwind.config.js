@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./index.html",
+       "./pages/**/*.html",
     "./src//*.{html,js}",
   ],
   theme: {
@@ -9,3 +10,4 @@ module.exports = {
   },
   plugins: [],
 }
+
